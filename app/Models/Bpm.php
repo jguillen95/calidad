@@ -1,0 +1,19 @@
+<?php
+
+namespace App\Models;
+
+use Illuminate\Database\Eloquent\Factories\HasFactory;
+use Illuminate\Database\Eloquent\Model;
+
+class Bpm extends Model
+{
+    use HasFactory;
+    protected $fillable=[
+        'fecha',
+        'turno',
+        'hora',
+        'ubicacion',
+        'realizo',
+        'vobo',
+    ];
+}
