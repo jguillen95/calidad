@@ -46,7 +46,9 @@
                     <td>{{$buscars->producto}}</td>
                     <td>{{$buscars->lote}}</td>
                     <td>
+                        @if (auth()->user()->usertype_id==1)
                         <button type="button" class="btn btn-info"><a style="color:white;" href="{{ route('limpieza.edit', $buscars->id)}}">Editar</a></button>
+                        @endif
                         <button type="button" class="btn btn-danger"><a style="color:white;" href="{{ route('limpieza.show', $buscars->id)}}" Target="_blank">PDF</a></button>
                     </td>
                 </tr>

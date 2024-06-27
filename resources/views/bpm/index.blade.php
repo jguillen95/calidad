@@ -30,6 +30,7 @@
           <table class='table table-bordered table-hover'>
             <thead>
               <tr>
+                <th>ID</th>
                 <th>Fecha</th>
                 <th>Turno</th>
                 <th>Hora</th>
@@ -42,6 +43,7 @@
 
             @foreach($buscar as $buscars)
                 <tr>
+                    <td>{{$buscars->id}}</td>
                     <td>{{$buscars->fecha}}</td>
                     <td>{{$buscars->turno}}</td>
                     <td>{{$buscars->hora}}</td>
@@ -49,7 +51,9 @@
                         @if (is_null($buscars->vobo))
                         <button type="button" class="btn btn-success"><a style="color:white;" href="{{ route('bpm.autoriza', $buscars->id)}}" Target="_blank">Autorizar</a></button>
                         @endif
+                        @if (auth()->user()->usertype_id==1)
                         <button type="button" class="btn btn-info"><a style="color:white;" href="{{ route('bpm.edit', $buscars->id)}}" >Editar</a></button>
+                        @endif
                         <button type="button" class="btn btn-danger"><a style="color:white;" href="{{ route('bpm.show', $buscars->id)}}" Target="_blank">PDF</a></button>
                     </td>
                 </tr>

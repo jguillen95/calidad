@@ -16,8 +16,8 @@
 
 
 -- Volcando estructura de base de datos para formularios
-CREATE DATABASE IF NOT EXISTS `formularios` /*!40100 DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci */ /*!80016 DEFAULT ENCRYPTION='N' */;
-USE `formularios`;
+CREATE DATABASE IF NOT EXISTS `calidad` /*!40100 DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci */ /*!80016 DEFAULT ENCRYPTION='N' */;
+USE `calidad`;
 
 -- Volcando estructura para tabla formularios.adicionals
 CREATE TABLE IF NOT EXISTS `adicionals` (

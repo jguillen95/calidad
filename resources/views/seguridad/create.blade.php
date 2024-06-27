@@ -48,7 +48,9 @@
                     <td>{{$buscars->marca}}</td>
                     <td>{{$buscars->id_sap}}</td>
                     <td>
+                        @if (auth()->user()->usertype_id==1)
                         <button type="button" class="btn btn-info"><a style="color:white;" href="{{ route('seguridad.edit', $buscars->id)}}">Editar</a></button>
+                        @endif
                         <button type="button" class="btn btn-danger"><a style="color:white;" href="{{ route('seguridad.show', $buscars->id)}}" Target="_blank">PDF</a></button>
                     </td>
                 </tr>

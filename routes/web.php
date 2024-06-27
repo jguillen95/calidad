@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\BiovitaController;
 use App\Http\Controllers\BpmController;
+use App\Http\Controllers\CambioController;
 use App\Http\Controllers\CapsulaController;
 use App\Http\Controllers\ContenidoController;
 use App\Http\Controllers\ResponsableController;
@@ -80,6 +81,7 @@ route::resource('polvo', PolvoController::class);
 route::resource('selenium', SeleniumController::class);
 route::resource('biovita', BiovitaController::class);
 route::resource('polvotemplate', PolvotempController::class);
+route::resource('cambio', CambioController::class);
 Route::controller(ResponsableController::class)->group(function(){
   Route::post('validator','validator');
   Route::get('responsable/{id}/recibe', 'recibe')->name('responsable.recibe');

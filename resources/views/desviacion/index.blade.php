@@ -59,7 +59,9 @@
                         @elseif($buscars->sem == 5)
                         <button type="button" class="btn btn-info"><a style="color:white;" href="{{ route('desviacion.cierre', $buscars->id)}}" >Cierre</a></button>
                         @endif
+                        @if (auth()->user()->usertype_id==1)
                         <button type="button" class="btn btn-warning"><a style="color:white;" href="{{ route('desviacion.edit', $buscars->id)}}" >Editar</a></button>
+                        @endif
                         <button type="button" class="btn btn-danger"><a style="color:white;" href="{{ route('desviacion.show', $buscars->id)}}" Target="_blank">PDF</a></button>
                     </td>
                 </tr>

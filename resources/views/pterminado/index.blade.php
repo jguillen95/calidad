@@ -30,6 +30,7 @@
           <table class='table table-bordered table-hover'>
             <thead>
               <tr>
+                <th>ID</th>
                 <th>Descripción</th>
                 <th>ID SAP</th>
                 <th>Marca</th>
@@ -42,11 +43,14 @@
 
             @foreach($buscar as $buscars)
                 <tr>
+                    <td>{{$buscars->id}}</td>
                     <td>{{$buscars->descripcion}}</td>
                     <td>{{$buscars->id_sap}}</td>
                     <td>{{$buscars->marca}}</td>
                     <td>
+                        @if (auth()->user()->usertype_id==1)
                         <button type="button" class="btn btn-info"><a style="color:white;" href="{{ route('pterminado.edit', $buscars->id)}}">Editar</a></button>
+                        @endif
                         <button type="button" class="btn btn-danger"><a style="color:white;" href="{{ route('pterminado.show', $buscars->id)}}" Target="_blank">PDF</a></button>
                     </td>
                 </tr>
